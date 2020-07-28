@@ -4,10 +4,10 @@ import React from 'react';
 import classes from './Exercise.module.css';
 
 //springs
-import {useSpring, useTrail, animated} from 'react-spring';
+//import {useSpring, useTrail, animated} from 'react-spring';
 
 //custom hook for intersection observation
-import useOnScreen from '../../../utils/useOnScreen';
+//import useOnScreen from '../../../utils/useOnScreen';
 
 const Exercise = ({exercises}) => {
   return (
