@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Oswald', sans-serif;
+}
+
+.heading {
+  color: yellow;
+  font-size: 26px;
+  text-align: center;
+}
+
+.paragraph {
+  font-size: 20px;
+}
+
+.image {
+  margin-left: 25px;
+  height: 200px;
+  width: 200px;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    display: flex;
+    margin-left: 40px;
+    width: 60%;
+  }
+  .heading {
+    font-size: 36px;
+  }
+  .paragraph {
+    font-size: 28px;
+  }
+}

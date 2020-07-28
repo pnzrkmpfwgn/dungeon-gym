@@ -1,0 +1,10 @@
+.flag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 5%;
+  margin-top: 10px;
+  margin-right: 25px;
+  z-index: 15;
+  cursor: pointer;
+}
