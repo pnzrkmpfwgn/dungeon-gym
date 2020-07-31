@@ -1,20 +1,22 @@
-import lunges from '../../images/lunges.png';
-import pushup from '../../images/pushup.png';
-import sidePlank from '../../images/side-plank.png';
-import situp from '../../images/situp.png';
-import gluteBridge from '../../images/glute-bridge.png';
+import benchPress from '../images/bench-press.png';
+import pushup from '../images/pushup.png';
+import sidePlank from '../images/side-plank.png';
+import situp from '../images/situp.png';
+import gluteBridge from '../images/glute-bridge.png';
+import squat from '../images/squat.png';
 
 export const dataEN = [
   {
     id: 1,
-    title: 'Lunges',
+    title: 'Bench Press',
     desc: [
-      'Start by standing with your feet shoulder-width apart and arms down at your sides.',
-      'Take a step forward with your right leg and bend your right knee as you do so, stopping when your thigh is parallel to the ground. Ensure that your right knee doesn’t extend past your right foot.',
-      'Push up off your right foot and return to the starting position. Repeat with your left leg. This is one rep.',
-      'Complete 10 reps for 3 sets.',
+      'Lie flat on your back on a bench.',
+      'Grip the bar with hands just wider than shoulder-width apart, so when you’re at the bottom of your move your hands are directly above your elbows. This allows for maximum force generation.',
+      'Bring the bar slowly down to your chest as you breathe in.',
+      'Push up as you breathe out, gripping the bar hard and watching a spot on the ceiling rather than the bar, so you can ensure it travels the same path every time.',
+      'Complete 6-8 reps with 3 sets.',
     ],
-    image: lunges,
+    image: benchPress,
   },
   {
     id: 2,
@@ -58,19 +60,31 @@ export const dataEN = [
     ],
     image: gluteBridge,
   },
+  {
+    id: 6,
+    title: 'Squat',
+    desc: [
+      'Start by standing straight, with your feet slightly wider than shoulder-width apart, and your arms at your sides.',
+      'Brace your core and, keeping your chest and chin up, push your hips back and bend your knees as if you’re going to sit in a chair.',
+      'Ensuring your knees don’t bow inward or outward, drop down until your thighs are parallel to the ground, bringing your arms out in front of you in a comfortable position. Pause for one second, then extend your legs and return to the starting position.',
+      '20 tekrardan oluşan 3 set ile tamamlayın.',
+    ],
+    image: squat,
+  },
 ];
 
 export const dataTR = [
   {
     id: 1,
-    title: 'Lunges',
+    title: 'Bench Press',
     desc: [
-      'Ayaklar omuz genişliğinde ayrı ve kollar yanlarda olacak şekilde başlayın',
-      'Öne doğru sağ adım atın ve dizinzi, uyluğunuz yere paralel olacak şekilde bükün. Sağ diziniz sağ ayağınızı geçmemeli.',
-      'Sağ ayağınızı itin ve başlangıç pozisyonuna dönün.',
-      '10 Tekrar 3 set yapınız.',
+      'Sırt üstü benche uzanın.',
+      'Barı omuz genişliğinden biraz daha geniş bir şekilde kavrayın, böylece hareketinizin altında olduğunuzda elleriniz dirseklerinizin hemen üzerindedir. Bu, maksimum kuvvetle kaldırmanıza izin verir.',
+      'Nefes alırken barı yavaşça göğsünüze getirin.',
+      'Nefes alırken yukarı doğru itin, barı sert kavrayın ve bar yerine tavanda bir nokta izleyin, böylece her seferinde aynı yolda gitmesini sağlayabilirsiniz.',
+      '3 set ile 6-8 tekrarla tamamlayın.',
     ],
-    image: lunges,
+    image: benchPress,
   },
   {
     id: 2,
@@ -114,4 +128,38 @@ export const dataTR = [
     ],
     image: gluteBridge,
   },
+  {
+    id: 6,
+    title: 'Squat',
+    desc: [
+      'Ayaklarınız omuz aralığından biraz daha geniş ve eller yanda olacak bir şekilde başlayın.',
+      'Karnınızı destekleyin, göğsünüzü ve çenenizi yukarıda tutarak kalçalarınızı geriye doğru itin ve dizlerinizi bir sandalyede oturacaksınız gibi bükün.',
+      'Dizlerinizin içe veya dışa doğru eğilmediğinden emin olun, uyluklarınız yere paralel oluncaya kadar aşağı inin ve kollarınızı önünüzde rahat bir konuma getirin. Bir saniye duraklayın, sonra bacaklarınızı uzatın ve başlangıç ​​pozisyonuna dönün.',
+      '10-12 tekrar ile 3 set yapın.',
+    ],
+    image: squat,
+  },
+];
+
+//fiyatlar
+export const pricesEN = [
+  {month: 1, price: 150, desc: 'Without Trainer'},
+  {month: 1, price: 200, desc: 'With Workout program'},
+  {month: 1, price: 300, desc: 'With Trainer'},
+  {month: 1, price: 800, desc: 'With Personal Trainer'},
+  {month: 3, price: 350, desc: ''},
+  {month: 6, price: 600, desc: ''},
+  {month: 12, price: 900, desc: ''},
+  {month: 12, price: 1200, desc: 'For couples (600₺/per person)'},
+];
+
+export const pricesTR = [
+  {month: 1, price: 150, desc: 'Eğitmensiz'},
+  {month: 1, price: 200, desc: 'Çalışma Programlı'},
+  {month: 1, price: 300, desc: 'Eğitmenli'},
+  {month: 1, price: 800, desc: 'Kişiye Özel Eğitmenli'},
+  {month: 3, price: 350, desc: ''},
+  {month: 6, price: 600, desc: ''},
+  {month: 12, price: 900, desc: ''},
+  {month: 12, price: 1200, desc: 'Çiftler İçin (kişi başı 600₺)'},
 ];

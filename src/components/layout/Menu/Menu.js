@@ -6,19 +6,29 @@ import Logo from '../../../images/Logo2.png';
 //router
 import {Link} from 'react-router-dom';
 
-const Menu = ({open, language}) => {
+const Menu = ({open, setOpen, language}) => {
   return (
     <StyledMenu open={open}>
-      <Link to='/'>
-        {' '}
+      {' '}
+      <Link to='/' onClick={() => setOpen(!open)}>
         <img src={Logo} alt='' />
       </Link>
-      <a href='/basic-exercise'>
+      <Link
+        className='link'
+        onClick={() => setOpen(!open)}
+        to='/basic-exercise'
+      >
         {' '}
         {language ? ' BASIC EXERCISE' : 'TEMEL EGZERSİZ'}{' '}
-      </a>
-      <a href='/membership'> {language ? 'MEMEBERSHIP' : 'ÜYELİK'} </a>
-      <a href='/contact'> {language ? ' CONTACT' : 'İLETİŞİM'} </a>
+      </Link>
+      <Link className='link' onClick={() => setOpen(!open)} to='/membership'>
+        {' '}
+        {language ? 'MEMEBERSHIP' : 'ÜYELİK'}{' '}
+      </Link>
+      <Link className='link' onClick={() => setOpen(!open)} to='/contact'>
+        {' '}
+        {language ? ' CONTACT' : 'İLETİŞİM'}{' '}
+      </Link>
     </StyledMenu>
   );
 };

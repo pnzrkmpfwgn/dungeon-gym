@@ -26,9 +26,10 @@ export const StyledMenu = styled.nav`
     height: 200px;
     -webkit-filter: drop-shadow(2px 2px 2px #222);
     filter: drop-shadow(2px 2px 2px #222);
+    cursor: pointer;
   }
 
-  a {
+  .link {
     font-size: 2rem;
     color: ${({theme}) => theme.primaryDark};
     font-family: 'Anton', sans-serif;
@@ -38,6 +39,7 @@ export const StyledMenu = styled.nav`
     text-decoration: none;
     transition: all 0.3s linear;
     position: relative;
+    cursor: pointer;
 
     padding: 10px 20px 10px 10px;
     font-size: 20px;

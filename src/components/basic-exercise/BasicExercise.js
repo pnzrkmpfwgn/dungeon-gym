@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect} from 'react';
 
 //styles
 import classes from './BasicExercise.module.css';
@@ -10,38 +10,44 @@ import Exercise from './exercise/Exercise';
 import {ThemeContext} from '../../App';
 
 //Data
-import {dataEN, dataTR} from './data';
+import {dataEN, dataTR} from '../../data/data';
 
 //spring
 import {useSpring, animated} from 'react-spring';
 
-//useOnScreen custom hook
-import useOnScreen from '../../utils/useOnScreen';
+//react-router-dom
+import {Link} from 'react-router-dom';
 
 const BasicExercise = () => {
   const isEnglish = useContext(ThemeContext);
-  const [ref, visible] = useOnScreen({rootMargin: '-100px'});
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const animation = useSpring({
-    from: {opacity: 0},
-    to: async (next) => {
-      if (visible) {
-        await next({opacity: 1});
-      }
-    },
+    from: {opacity: 0, transform: 'translate3d(-30px,0,0)'},
+    to: {opacity: 1, transform: 'translate3d(0px,0,0)'},
   });
 
   return (
-    <animated.div ref={ref} style={animation} className={classes.container}>
+    <animated.div style={animation} className={classes.container}>
       {isEnglish ? (
         <div>
           <Exercise exercises={dataEN} />
         </div>
       ) : (
-        <div ref={ref}>
+        <div>
           <Exercise exercises={dataTR} />
         </div>
       )}
+      <p>
+        {' '}
+        <Link to='/membership' className={classes.btn}>
+          {' '}
+          {isEnglish ? 'Membership' : 'Üyelik'}{' '}
+        </Link>
+      </p>
     </animated.div>
   );
 };

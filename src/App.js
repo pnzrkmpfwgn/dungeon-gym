@@ -8,6 +8,9 @@ import English from './images/English.png';
 //Components
 import MainPage from './components/main-page/MainPage';
 import BasicExercise from './components/basic-exercise/BasicExercise';
+import Membership from './components/membership/Membership';
+import Contact from './components/contact/Contact';
+import Footer from './components/footer/Footer';
 
 import classes from './App.module.css';
 import {Route, Switch} from 'react-router-dom';
@@ -40,8 +43,11 @@ function App() {
           {' '}
           <Switch>
             <Route path='/basic-exercise' exact component={BasicExercise} />
+            <Route path='/membership' exact component={Membership} />
+            <Route path='/contact' exact component={Contact} />
             <Route path='/' component={MainPage} />
           </Switch>
+          <Footer />
         </Layout>
       </Fragment>
     </ThemeContext.Provider>

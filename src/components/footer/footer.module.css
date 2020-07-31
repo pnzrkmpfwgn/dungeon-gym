@@ -1,0 +1,12 @@
+.test {
+  position: relative;
+  bottom: -100px;
+  width: 100%;
+  font-size: 18px;
+  padding: 15px;
+  text-align: center;
+  color: yellow;
+  background-color: black;
+  height: 50px;
+  margin-top: 50px;
+}

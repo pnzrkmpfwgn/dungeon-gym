@@ -6,3 +6,19 @@
   justify-content: center;
   align-items: center;
 }
+.btn {
+  background-color: black;
+  padding: 5px;
+  color: yellow;
+  border: 1px solid yellow;
+  font-size: 24px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn:hover {
+  background-color: yellow;
+  color: black;
+  border: 5px solid black;
+  font-size: 26px;
+}

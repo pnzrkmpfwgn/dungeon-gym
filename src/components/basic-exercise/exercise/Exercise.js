@@ -9,6 +9,8 @@ import classes from './Exercise.module.css';
 //custom hook for intersection observation
 //import useOnScreen from '../../../utils/useOnScreen';
 
+// !!! Don't forget to implement viewport reset.
+
 const Exercise = ({exercises}) => {
   return (
     <div className={classes.container}>

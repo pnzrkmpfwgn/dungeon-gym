@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 426px) {
+  .container {
+    margin-top: 100px;
+  }
+}
+
+.heading {
+  font-family: 'Oswald', sans-serif;
+  color: yellow;
+  letter-spacing: 0.19rem;
+}

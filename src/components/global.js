@@ -25,14 +25,6 @@ export const GlobalStyles = createGlobalStyle`
         z-index:10;
         cursor:pointer;
     }
-    footer{
-        font-size:18px;
-        padding:15px;
-        text-align:center;
-        margin-top:100px;
-        color:yellow;
-        background-color:black;
-        height:50px;
-    }
+   
     
 `;

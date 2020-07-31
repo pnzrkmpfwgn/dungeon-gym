@@ -28,7 +28,7 @@ const Layout = ({children}) => {
           <GlobalStyles />
           <Header />
           <main>{children}</main>
-          <footer>&#xa9; Ülkü Ayberk Yiğit</footer>
+          {/*  */}
         </div>
       </>
     </ThemeProvider>

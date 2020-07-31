@@ -44,7 +44,7 @@ const MainPage = () => {
         <div className={classes.btn_container}>
           <p>
             {' '}
-            <Link className={classes.btn} to='/basic-exercise'>
+            <Link to='/basic-exercise' className={classes.btn}>
               {' '}
               {isEnglish ? "Let's Warm Up " : 'Hadi Isınalım!'}{' '}
             </Link>
