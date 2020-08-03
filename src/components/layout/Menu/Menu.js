@@ -10,22 +10,37 @@ const Menu = ({open, setOpen, language}) => {
   return (
     <StyledMenu open={open}>
       {' '}
-      <Link to='/' onClick={() => setOpen(!open)}>
-        <img src={Logo} alt='' />
+      <Link
+        title={language ? 'Main Page' : 'Anasayfa'}
+        to='/'
+        onClick={() => setOpen(!open)}
+      >
+        <img src={Logo} alt='Dungeon Gym' />
       </Link>
       <Link
         className='link'
         onClick={() => setOpen(!open)}
+        title={language ? 'Basic Exercise' : 'Temel Egzersiz'}
         to='/basic-exercise'
       >
         {' '}
         {language ? ' BASIC EXERCISE' : 'TEMEL EGZERSİZ'}{' '}
       </Link>
-      <Link className='link' onClick={() => setOpen(!open)} to='/membership'>
+      <Link
+        className='link'
+        onClick={() => setOpen(!open)}
+        to={'/membership'}
+        title={language ? 'Membership' : 'Üyelik'}
+      >
         {' '}
         {language ? 'MEMEBERSHIP' : 'ÜYELİK'}{' '}
       </Link>
-      <Link className='link' onClick={() => setOpen(!open)} to='/contact'>
+      <Link
+        className='link'
+        onClick={() => setOpen(!open)}
+        to='/contact'
+        title={language ? 'Contact' : 'İletişim'}
+      >
         {' '}
         {language ? ' CONTACT' : 'İLETİŞİM'}{' '}
       </Link>

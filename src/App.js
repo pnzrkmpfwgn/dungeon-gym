@@ -28,14 +28,16 @@ function App() {
             onClick={() => setIsEnglish(!isEnglish)}
             className={classes.flag}
             src={Turkish}
-            alt=''
+            alt='Turkish Flag'
+            title='Türkçe'
           />
         ) : (
           <img
             onClick={() => setIsEnglish(!isEnglish)}
             className={classes.flag}
             src={English}
-            alt=''
+            alt='English Flag'
+            title='English'
           />
         )}
 

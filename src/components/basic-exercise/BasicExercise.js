@@ -18,6 +18,8 @@ import {useSpring, animated} from 'react-spring';
 //react-router-dom
 import {Link} from 'react-router-dom';
 
+import {Helmet, HelmetProvider} from 'react-helmet-async';
+
 const BasicExercise = () => {
   const isEnglish = useContext(ThemeContext);
 
@@ -31,24 +33,47 @@ const BasicExercise = () => {
   });
 
   return (
-    <animated.div style={animation} className={classes.container}>
-      {isEnglish ? (
-        <div>
-          <Exercise exercises={dataEN} />
-        </div>
-      ) : (
-        <div>
-          <Exercise exercises={dataTR} />
-        </div>
-      )}
-      <p>
-        {' '}
-        <Link to='/membership' className={classes.btn}>
+    <>
+      <HelmetProvider>
+        <Helmet>
+          <title>{isEnglish ? 'Basic Exercise' : 'Temel Egzersiz'}</title>
+          <meta
+            name='description'
+            content={
+              isEnglish
+                ? 'Basic exercises to get you started'
+                : 'Başlamanız için temel egzersizler.'
+            }
+          />
+          <link
+            rel='canonical'
+            href='https://www.dungeon-gym.com/basic-exercise'
+          />
+        </Helmet>
+      </HelmetProvider>
+      <animated.div style={animation} className={classes.container}>
+        {isEnglish ? (
+          <div>
+            <Exercise exercises={dataEN} />
+          </div>
+        ) : (
+          <div>
+            <Exercise exercises={dataTR} />
+          </div>
+        )}
+        <p>
           {' '}
-          {isEnglish ? 'Membership' : 'Üyelik'}{' '}
-        </Link>
-      </p>
-    </animated.div>
+          <Link
+            to='/membership'
+            title={isEnglish ? 'Membership' : 'Üyelik'}
+            className={classes.btn}
+          >
+            {' '}
+            {isEnglish ? 'Membership' : 'Üyelik'}{' '}
+          </Link>
+        </p>
+      </animated.div>
+    </>
   );
 };
 

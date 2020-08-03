@@ -11,25 +11,37 @@ const Nav = () => {
   return (
     <nav className={classes.navigation}>
       <div>
-        <Link to='/'>
-          <img className={classes.logo} src={Logo} alt='' />
+        <Link title={isEnglish ? 'Main Page' : 'Anasayfa'} to='/'>
+          <img className={classes.logo} src={Logo} alt='Dungeon Gym' />
         </Link>
       </div>
       <div className={classes.listContainer}>
         <ul className={classes.list}>
           <li>
-            <Link className={classes.link} to='/basic-exercise'>
+            <Link
+              title={isEnglish ? 'Basic Exercise' : 'Temel Egzersiz'}
+              className={classes.link}
+              to='/basic-exercise'
+            >
               {isEnglish ? 'BASIC EXERCISE' : 'TEMEL EGZERSİZ'}
             </Link>
           </li>
           <li>
-            <Link className={classes.link} to='/membership'>
+            <Link
+              title={isEnglish ? 'Membership' : 'Üyelik'}
+              className={classes.link}
+              to='/membership'
+            >
               {isEnglish ? 'MEMBERSHIP' : 'ÜYELİK'}
             </Link>
           </li>
           <li>
             {' '}
-            <Link className={classes.link} to='/contact'>
+            <Link
+              title={isEnglish ? 'Contact' : 'İletişim'}
+              className={classes.link}
+              to='/contact'
+            >
               {' '}
               {isEnglish ? 'CONTACT' : 'İLETİŞİM'}{' '}
             </Link>{' '}

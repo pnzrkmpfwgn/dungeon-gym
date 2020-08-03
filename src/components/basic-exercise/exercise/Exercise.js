@@ -17,7 +17,11 @@ const Exercise = ({exercises}) => {
       {exercises.map((exercise) => (
         <div key={exercise.id}>
           <h1 className={classes.heading}> {exercise.title} </h1>
-          <img className={classes.image} src={exercise.image} alt='' />
+          <img
+            className={classes.image}
+            src={exercise.image}
+            alt='Workout Spor'
+          />
           <ul>
             {exercise.desc.map((desc, i) => (
               <li className={classes.paragraph} key={i}>

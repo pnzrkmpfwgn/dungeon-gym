@@ -15,6 +15,8 @@ import Price from './price/Price';
 //data
 import {pricesEN, pricesTR} from '../../data/data';
 
+import {HelmetProvider, Helmet} from 'react-helmet-async';
+
 const MemberShip = () => {
   const isEnglish = useContext(ThemeContext);
   const animation = useSpring({
@@ -29,6 +31,20 @@ const MemberShip = () => {
   }, []);
   return (
     <Fragment>
+      <HelmetProvider>
+        <Helmet>
+          <link rel='canonical' href='https://dungeon-gym.com/membership' />
+          <title> {isEnglish ? 'Membership' : 'Üyelik'} </title>
+          <meta
+            name='description'
+            content={
+              isEnglish
+                ? 'To learn more about membership plans.'
+                : 'Üyelik planları hakkında dahası.'
+            }
+          />
+        </Helmet>
+      </HelmetProvider>
       <div className={classes.container}>
         <animated.h1 className={classes.heading} style={animation}>
           {' '}
