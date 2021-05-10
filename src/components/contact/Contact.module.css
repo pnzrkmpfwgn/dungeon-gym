@@ -5,12 +5,8 @@
   color: yellow;
   font-style: italic;
   letter-spacing: 0.15rem;
+  height:100vh;
 }
-.map {
-  height: 50vh;
-  width: 50%;
-}
-
 .spec {
   font-style: normal;
   color: white;
